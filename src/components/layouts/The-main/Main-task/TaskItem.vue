@@ -61,7 +61,10 @@
           <div
             class="position-absolute top-0 end-0 task_content--action d-none align-items-center ms-auto gap-2"
           >
-            <button @click="toggleEditTaskForm(index)" class="action__edit">
+            <button
+              @click.stop="toggleEditTaskForm(index)"
+              class="action__edit"
+            >
               <span>
                 <svg width="24" height="24">
                   <g fill="none" fill-rule="evenodd">
@@ -78,7 +81,7 @@
               </span>
             </button>
 
-            <button @click="deleteTask(index)" class="action__delete">
+            <button @click.stop="deleteTask(index)" class="action__delete">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +112,7 @@
               </span>
             </button>
 
-            <router-link class="action__reply" to="/task/">
+            <router-link class="action__reply" :to="`/task/:${data.id}`">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +146,11 @@
     </div>
 
     <div v-show="data.isEditTaskFormOpen">
-      <form class="border border-secondary-subtle rounded p-3 fs-6" action="#">
+      <form
+        @click.stop
+        class="border border-secondary-subtle rounded p-3 fs-6"
+        action="#"
+      >
         <div>
           <input
             class="w-100 border-0"
@@ -202,7 +209,7 @@
 
           <div class="ms-auto d-flex gap-2">
             <button
-              @click.prevent="toggleEditTaskForm(index)"
+              @click.stop.prevent="toggleEditTaskForm(index)"
               class="border-0 p-2 rounded fs-12"
             >
               <span>Cancel</span>
@@ -211,7 +218,7 @@
             <button
               class="edit-task__button border-0 p-2 rounded fs-12 text-white"
               :class="form.name.trim() ? 'add-task' : 'not-alowed'"
-              @click.prevent="editTask"
+              @click.stop.prevent="editTask"
             >
               <span>Edit task</span>
             </button>

@@ -175,7 +175,7 @@
 export default {};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 button {
   border: none;
   background-color: transparent;
@@ -197,11 +197,11 @@ ul {
 
 .sidebar__navigation {
   width: 100%;
-}
 
-.sidebar__navigation--item {
-  display: block;
-  width: 100%;
+  &--item {
+    display: block;
+    width: 100%;
+  }
 }
 
 .sidebar__navigation--item:hover,

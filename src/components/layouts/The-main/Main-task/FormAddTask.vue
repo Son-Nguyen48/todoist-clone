@@ -76,7 +76,7 @@
 
           <div class="ms-auto d-flex gap-2">
             <button
-              @click="toggleAddTaskForm"
+              @click.prevent="toggleAddTaskForm"
               class="border-0 p-2 rounded fs-12"
             >
               <span>Cancel</span>

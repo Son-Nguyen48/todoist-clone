@@ -2,7 +2,10 @@
   <div
     class="vw-100 vh-100 position-absolute top-0 end-0 bg-modal d-flex justify-content-center align-items-center"
   >
-    <task-modal></task-modal>
+    <task-modal
+      @close-modal="closeModal"
+      :currentModal="currentModal"
+    ></task-modal>
   </div>
 </template>
 
@@ -10,8 +13,22 @@
 import TaskModal from "./TaskModal.vue";
 
 export default {
+  props: {
+    currentModal: {
+      type: Object,
+      require: true
+    }
+  },
   components: {
     TaskModal
+  },
+  mounted() {
+    console.log(this.currentModal, "currentModal");
+  },
+  methods: {
+    closeModal() {
+      this.$emit("close-modal");
+    }
   }
 };
 </script>

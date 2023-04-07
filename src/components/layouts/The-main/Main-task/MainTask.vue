@@ -8,6 +8,7 @@
           @toggle-edit-task-form="toggleEditTaskForm"
           @edit-task="editTask"
           @delete-task="deleteTask"
+          @click.native="openModal(task)"
         ></task-item>
       </li>
 
@@ -15,12 +16,20 @@
         <form-add-task @add-task="addTask"></form-add-task>
       </li>
     </ul>
+
+    <the-modal
+      @close-modal="isModalOpen = !isModalOpen"
+      v-if="isModalOpen"
+      :currentModal="currentModal"
+    ></the-modal>
   </div>
 </template>
 
 <script>
 import TaskItem from "./TaskItem.vue";
 import FormAddTask from "./FormAddTask.vue";
+import TheModal from "../The-modal/TheModal.vue";
+import { cloneDeep } from "lodash";
 
 export default {
   data() {
@@ -89,12 +98,15 @@ export default {
           dueDate: "2022-04-08",
           isEditTaskFormOpen: false
         }
-      ]
+      ],
+      isModalOpen: false,
+      currentModal: {}
     };
   },
   components: {
     TaskItem,
-    FormAddTask
+    FormAddTask,
+    TheModal
   },
   methods: {
     addTask(data) {
@@ -113,8 +125,13 @@ export default {
     },
 
     deleteTask(data) {
-      if (!data) return;
-      else this.tasks.splice(data, 1);
+      this.tasks.splice(data, 1);
+    },
+
+    openModal(data) {
+      this.isModalOpen = !this.isModalOpen;
+      this.currentModal = cloneDeep(data);
+      console.log(this.currentModal, "current");
     }
   }
 };

@@ -10,8 +10,6 @@
         <router-view class="main-content"></router-view>
       </main>
     </div>
-
-    <!-- <the-modal></the-modal> -->
   </div>
 </template>
 
