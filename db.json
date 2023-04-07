@@ -1,0 +1,84 @@
+{
+  "listTasks": [
+    {
+      "id": 1,
+      "title": "Go to the Gym",
+      "description": "Go to somewhere!",
+      "status": "Doing",
+      "createdAt": "2022-02-05",
+      "priority": "Priority 1",
+      "color": "text-danger"
+    },
+
+    {
+      "id": 2,
+      "title": "Go to the School",
+      "description": "Go to somewhere!",
+      "status": "Done",
+      "createdAt": "2022-06-01",
+      "priority": "Priority 3",
+      "color": "text-primary"
+    },
+
+    {
+      "id": 3,
+      "title": "Go to the Hospital",
+      "description": "Go to somewhere! ",
+      "status": "Doing",
+      "createdAt": "2022-02-08",
+      "priority": "Priority 4",
+      "color": "text-danprimary-emphasisger"
+    },
+
+    {
+      "id": 4,
+      "title": "Go to the Supermarket",
+      "description": "Go to somewhere!",
+      "status": "Done",
+      "createdAt": "2022-04-08",
+      "priority": "Priority 3",
+      "color": "text-primary"
+    },
+    {
+      "id": 5,
+      "title": "Go to the Movie theater",
+      "description": "Go to somewhere!",
+      "status": "Done",
+      "createdAt": "2022-04-08",
+      "priority": "Priority 2",
+      "color": "text-warning"
+    },
+
+    {
+      "id": 6,
+      "title": "Go to the Stadium",
+      "description": "Go to somewhere!",
+      "status": "Done",
+      "createdAt": "2022-04-08",
+      "priority": "Priority 1",
+      "color": "text-danger"
+    }
+  ],
+  "listPriority": [
+    {
+      "id": 1,
+      "priority": "Priority 1",
+      "color": "text-danger"
+    },
+    {
+      "id": 2,
+      "priority": "Priority 2",
+      "color": "text-warning"
+    },
+    {
+      "id": 3,
+      "priority": "Priority 3",
+      "color": "text-primary"
+    },
+    {
+      "id": 4,
+      "priority": "Priority 4",
+      "color": "text-danprimary-emphasisger"
+    }
+  ]
+}
