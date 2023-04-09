@@ -1,6 +1,6 @@
 <template>
   <div class="w-100">
-    <main-header class="mw-800 w-100 m-auto"></main-header>
+    <main-header :name="'Today'" class="mw-800 w-100 m-auto"></main-header>
     <main-task class="mw-800 w-100 m-auto h-auto"></main-task>
   </div>
 </template>

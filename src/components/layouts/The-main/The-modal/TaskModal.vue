@@ -1,12 +1,12 @@
 <template>
-  <div class="w-75 h-75 bg-white border border-danger rounded-4">
+  <div class="w-50 h-75 bg-white border border-danger rounded-4">
     <nav
       class="navbar navbar-expand rounded-top-5 border-bottom border-light-subtle d-flex px-4"
     >
       <div>
         <router-link
           to="/mailbox"
-          class="text-dark text-decoration-none d-flex align-items-center"
+          class="text-dark text-decoration-none d-flex gap-2 align-items-center"
         >
           <span>
             <svg

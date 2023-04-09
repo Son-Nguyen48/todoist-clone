@@ -1,6 +1,6 @@
 <template>
   <div
-    class="vw-100 vh-100 position-absolute top-0 end-0 bg-modal d-flex justify-content-center align-items-center"
+    class="vw-100 vh-100 position-fixed top-0 end-0 bg-modal d-flex justify-content-center align-items-center"
   >
     <task-modal
       @close-modal="closeModal"

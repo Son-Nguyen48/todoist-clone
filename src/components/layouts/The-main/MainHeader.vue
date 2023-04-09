@@ -2,7 +2,7 @@
   <div class="px-5 pt-4 d-flex w-100 align-items-center pb-2">
     <div class="main-header__left">
       <h5 class="d-flex gap-1 align-items-center">
-        <span>Today</span>
+        <span>{{ name }}</span>
         <span class="fs-12 fw-lighter">Tue 4 Apr</span>
       </h5>
     </div>
@@ -29,7 +29,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["name"]
+};
 </script>
 
 <style scoped>
